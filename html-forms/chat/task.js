@@ -21,17 +21,14 @@ function sendMessage(event) {
     if (String(event.key) === 'Enter' && formText!=='') {
         messages.innerHTML += `
         <div class="message message_client">
-            <div class="message__time">` + hours + `:` + minutes + `</div>` + formText +
-            `<div class="message__text">
-                </div>
-        </div>
-        `
+            <div class="message__time">` + hours + `:` + minutes + `</div>
+            <div class="message__text">` + formText + `</div>
+        </div>`
         document.getElementById('chat-widget__input').value = '';
         messages.innerHTML += `
         <div class="message">
-            <div class="message__time">` + hours + `:` + minutes + `</div>` + getRandomMessage() +
-            `<div class="message__text">
-                </div>
+            <div class="message__time">` + hours + `:` + minutes + `</div>
+            <div class="message__text">` + getRandomMessage() + `</div>
         </div>
         `
     } else {
